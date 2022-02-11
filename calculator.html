@@ -1,0 +1,68 @@
+<html>
+<head>
+	
+	<link  rel="stylesheet" href="../LGM3/stylecalculator.css">
+</head>
+<body>
+	<div class="ONE">CALCULATOR</div>
+
+	<table border="15">
+        <tr>
+			<td><img src="../LGM3/images.jpg" style="width: 80px;height: 20px;"></td>
+		<tr>
+			<td colspan="3.5" ><input type="text" id="ans"/></td>
+		
+			<td ><input type ="reset" value="C" onclick="clr()"/> </td>                                    
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onclick="disp('7')"/> </td>
+			<td><input type="button" value="8" onclick="disp('8')"/> </td>
+			<td><input type="button" value="9" onclick="disp('9')"/> </td>
+			<td><input type="button" value="/" onclick="disp('/')"/> </td>
+            <td><input type="button" value="(" onclick="disp('(')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onclick="disp('4')"/> </td>
+			<td><input type="button" value="5" onclick="disp('5')"/> </td>
+			<td><input type="button" value="6" onclick="disp('6')"/> </td>
+			<td><input type="button" value="-" onclick="disp('-')"/> </td>
+            <td><input type="button" value=")" onclick="disp(')')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" onclick="disp('1')"/> </td>
+			<td><input type="button" value="2" onclick="disp('2')"/> </td>
+			<td><input type="button" value="3" onclick="disp('3')"/> </td>
+			<td><input type="button" value="+" onclick="disp('+')"/> </td>
+            <td><input type="button" value="%" onclick="disp('%')"/> </td>
+            
+		</tr>
+		<tr>
+            <td><input type="button" value="00" onclick="disp('00')"/> </td>
+			<td><input type="button" value="." onclick="disp('.')"/> </td>
+			<td><input type="button" value="0" onclick="disp('0')"/> </td>
+		
+			<td><input type="button" value="*" onclick="disp('*')"/> </td>
+           
+            <td><input type="button" value="=" onclick="solution()"/> </td>
+		</tr>
+      
+
+	</table>
+	<script>
+		function disp(val)
+		{
+			document.getElementById("ans").value+=val;
+		}
+		function solution()
+		{
+			let data= document.getElementById("ans").value;
+			let result = eval(data);
+			document.getElementById("ans").value = result;
+		}
+		function clr()
+		{
+			document.getElementById("ans").value = "";
+		}
+	</script>
+</body>
+</html>
