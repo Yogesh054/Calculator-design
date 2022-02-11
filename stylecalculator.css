@@ -60,15 +60,7 @@
     .ONE
     {
         font-size: xx-large;
-        margin-right: auto;
-        margin-left: 650px;
+        text-align:center;
         color:#545464;
     }
-    @media only screen and (max-width:767px)
-    {
-        .ONE
-        {
-            margin-left: 30px;
-        }
-
-    }
+   
